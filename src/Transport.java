@@ -32,6 +32,9 @@ public abstract class Transport {
             this.speed = speed;
         }
     }
+    public String parse(String value){
+        return value != null && !value.isEmpty()? value : "default";
+    }
 
     public Transport(String brand, String model, int productionYear, String productionCountry, double speed, double priceOfTrip, String station, String finalStop, int numberOfWagons) {
 

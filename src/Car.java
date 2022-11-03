@@ -70,7 +70,7 @@ public class Car extends Transport {
         }
         if (key == null) {
 
-            this.key = new Insurance(2010.09.20 20, "ОООхООО");
+            this.key = new Insurance(2111.0, 20, "ОООхООО");
         } else {
             this.key = key;
         }
