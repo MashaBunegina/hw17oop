@@ -1,8 +1,8 @@
 public class Train extends Transport {
     double priceOfTrip;
 
-    public Train(String brand, String model,int productionYear, String productionCountry, double priceOfTrip, double travelTime, String station, String finalStop, int numberOfWagons) {
-        super(brand, model,productionYear, productionCountry, priceOfTrip, travelTime, station, finalStop, numberOfWagons );
+    public Train(String brand, String model, int productionYear, String productionCountry, double priceOfTrip, double travelTime, String station, String finalStop, int numberOfWagons) {
+        super(brand, model, productionYear, productionCountry, priceOfTrip, travelTime, station, finalStop, numberOfWagons);
         this.priceOfTrip = priceOfTrip;
         this.travelTime = travelTime;
         this.station = station;
@@ -36,7 +36,7 @@ public class Train extends Transport {
     String finalStop;
     int numberOfWagons;
 
-    public  void  refill(){
+    public void refill() {
         System.out.println("нужно заправлять дизелем");
 
     }

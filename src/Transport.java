@@ -11,7 +11,7 @@ public abstract class Transport {
     int numberOfWagons;
     String station;
     double priceOfTrip;
-    int  numberOfStandingPlaces;
+    int numberOfStandingPlaces;
 
     public Transport(String brand, String model, double engineVolume, String colour, int productionYear, String productionCountry, String transmission, String bodyType, String registrationNumber, int numberOfSeats, boolean summerTyres, double speed) {
 
@@ -133,7 +133,7 @@ public abstract class Transport {
         }
     }
 
-    public void Train (String brand, String model, int productionYear, String productionCountry, double speed, double priceOfTrip, String station, String finalStop, int numberOfStandingPlaces , int numberOfBreakStops) {
+    public void Train(String brand, String model, int productionYear, String productionCountry, double speed, double priceOfTrip, String station, String finalStop, int numberOfStandingPlaces, int numberOfBreakStops) {
         if (brand == null || brand.isEmpty()) {
             this.brand = "default";
         } else {
@@ -238,7 +238,6 @@ public abstract class Transport {
     public Double getSpeed() {
         return speed;
     }
-
 
 
     public void setBrand(String brand) {

@@ -1,4 +1,4 @@
-public class Bus extends Transport{
+public class Bus extends Transport {
     String brand;
     String model;
     private int productionYear;
@@ -12,8 +12,8 @@ public class Bus extends Transport{
     int numberOfBreakStops;
 
 
-    public Bus (String brand, String model, double engineVolume, String colour, int productionYear, String productionCountry, String transmission, String bodyType, String registrationNumber, int numberOfStandingPlaces, boolean summerTyres, double speed) {
-        super(brand, model, engineVolume, colour, productionYear, productionCountry, transmission, bodyType, registrationNumber, numberOfStandingPlaces,summerTyres, speed);
+    public Bus(String brand, String model, double engineVolume, String colour, int productionYear, String productionCountry, String transmission, String bodyType, String registrationNumber, int numberOfStandingPlaces, boolean summerTyres, double speed) {
+        super(brand, model, engineVolume, colour, productionYear, productionCountry, transmission, bodyType, registrationNumber, numberOfStandingPlaces, summerTyres, speed);
 
         if (brand == null || brand.isEmpty()) {
             this.brand = "default";
@@ -33,8 +33,8 @@ public class Bus extends Transport{
         }
     }
 
-    public Bus (String brand, String model, int productionYear, String productionCountry, double speed, double priceOfTrip, String station, String finalStop, int numberOfStandingPlaces ,int numberOfBreakStops) {
-        super (brand, model,productionYear,productionCountry, speed, priceOfTrip, station, finalStop,numberOfStandingPlaces,numberOfBreakStops);
+    public Bus(String brand, String model, int productionYear, String productionCountry, double speed, double priceOfTrip, String station, String finalStop, int numberOfStandingPlaces, int numberOfBreakStops) {
+        super(brand, model, productionYear, productionCountry, speed, priceOfTrip, station, finalStop, numberOfStandingPlaces, numberOfBreakStops);
 
         if (brand == null || brand.isEmpty()) {
             this.brand = "default";
@@ -89,10 +89,12 @@ public class Bus extends Transport{
 
         }
     }
+
     public void bus() {
         System.out.println(" Автобус " + brand + " модель " + model + " " + productionYear + " года выпуска в " + productionCountry + " скорость передвижения — " + speed + " км/ч, отходит от " + station + " и следует до станции " + finalStop + ". Цена поездки —  " + priceOfTrip + " рублей, в автобусе" + numberOfStandingPlaces + " стоячих мест, автобус делает" + numberOfBreakStops + "остановок на перерыв");
     }
-    public  void  refill(){
+
+    public void refill() {
         System.out.println("можно заправлять бензином или дизелем на заправке.");
 
     }
@@ -147,7 +149,6 @@ public class Bus extends Transport{
     public Double getSpeed() {
         return speed;
     }
-
 
 
     public void setBrand(String brand) {

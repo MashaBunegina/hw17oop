@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Car extends Transport{
+public class Car extends Transport {
     private String brand;
     private String model;
     double engineVolume;
@@ -12,7 +12,8 @@ public class Car extends Transport{
     String registrationNumber;
     private int numberOfSeats;
     public boolean summerTyres;
-    private Insurance.Key key;
+    private Insurance insurance;
+    private Key key;
 
     public Car(String brand, String model, double engineVolume, String colour, int productionYear, String productionCountry, String transmission, String bodyType, String registrationNumber, int numberOfSeats, boolean summerTyres, double speed) {
         super(brand, model, engineVolume, colour, productionYear, productionCountry, transmission, bodyType, registrationNumber, numberOfSeats, summerTyres, speed);
@@ -67,20 +68,23 @@ public class Car extends Transport{
         } else {
             this.numberOfSeats = numberOfSeats;
         }
-        if(key == null) {
-            this.key = new Insurance.Key();
+        if (key == null) {
+
+            this.key = new Insurance(2010.09.20 20, "ОООхООО");
         } else {
             this.key = key;
         }
     }
-    public void changeTyres(){
-        summerTyres = ! summerTyres;
+
+    public void changeTyres() {
+        summerTyres = !summerTyres;
     }
 
     public void car() {
         System.out.println(brand + model + ",  " + productionYear + " год выпуска, сборка в " + productionCountry + ", цвет " + colour + ", " + "объем двигателя - " + engineVolume + " л.");
     }
-    public  void  refill(){
+
+    public void refill() {
         System.out.println("можно заправлять бензином, дизелем на заправке или заряжать на специальных электропарковках, если это электрокар.");
 
     }
@@ -155,8 +159,8 @@ public class Car extends Transport{
             return cost;
         }
 
-        public Insurance(LocalDate validityPeriod, double cost, String number){
-            if (validityPeriod ==null) {
+        public Insurance(LocalDate validityPeriod, double cost, String number) {
+            if (validityPeriod == null) {
                 validityPeriod = LocalDate.now().plusDays(365);
             } else {
                 this.validityPeriod = validityPeriod;
@@ -169,8 +173,8 @@ public class Car extends Transport{
             }
 
 
-
         }
+    }
         private static class Key {
             private final boolean remoteEngineStart;
             private final boolean keylessAccess;
@@ -189,7 +193,7 @@ public class Car extends Transport{
             }
 
 
-            public boolean getKeylessAccess(){
+            public boolean getKeylessAccess() {
                 return keylessAccess;
             }
         }
