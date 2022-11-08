@@ -1,3 +1,4 @@
+
 public class Train extends Transport {
     double priceOfTrip;
 
@@ -63,5 +64,4 @@ public class Train extends Transport {
     }
 
 }
-
 

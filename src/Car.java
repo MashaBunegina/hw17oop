@@ -4,6 +4,20 @@ public class Car extends Transport {
     private String brand;
     private String model;
     double engineVolume;
+
+    public Car(String brand, String model, double engineVolume) {
+        super(brand, model, engineVolume);
+    }
+
+    @Override
+    public void startMoving() {
+        System.out.println("Начать движение");
+    }
+
+    public void stopMoving() {
+        System.out.println("Закончить движение");
+    }
+
     String colour;
     private int productionYear;
     private String productionCountry;
@@ -68,11 +82,11 @@ public class Car extends Transport {
         } else {
             this.numberOfSeats = numberOfSeats;
         }
-        if (key == null) {
 
-            this.key = new Insurance(2111.0, 20, "ОООхООО");
+        if (key == null) {
+            this.insurance = new Insurance(LocalDate.of(2022, 11, 8),202.1,"ОООхООО");
         } else {
-            this.key = key;
+            this.insurance = insurance;
         }
     }
 
@@ -175,28 +189,29 @@ public class Car extends Transport {
 
         }
     }
-        private static class Key {
-            private final boolean remoteEngineStart;
-            private final boolean keylessAccess;
 
-            public Key(boolean remoteEngineStart, boolean keylessAccess) {
-                this.remoteEngineStart = remoteEngineStart;
-                this.keylessAccess = keylessAccess;
-            }
+    private static class Key {
+        private final boolean remoteEngineStart;
+        private final boolean keylessAccess;
 
-            public Key() {
-                this(false, false);
-            }
+        public Key(boolean remoteEngineStart, boolean keylessAccess) {
+            this.remoteEngineStart = remoteEngineStart;
+            this.keylessAccess = keylessAccess;
+        }
 
-            public boolean getRemoteEngineStart() {
-                return remoteEngineStart;
-            }
+        public Key() {
+            this(false, false);
+        }
+
+        public boolean getRemoteEngineStart() {
+            return remoteEngineStart;
+        }
 
 
-            public boolean getKeylessAccess() {
-                return keylessAccess;
-            }
+        public boolean getKeylessAccess() {
+            return keylessAccess;
         }
     }
-
 }
+
+

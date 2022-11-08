@@ -1,7 +1,21 @@
 public class Bus extends Transport {
-    String brand;
-    String model;
-    private int productionYear;
+
+/*
+    public Bus(String brand, String model, double engineVolume) {
+        super(brand, model, engineVolume);
+    }
+
+    @Override
+    public void startMoving() {
+        System.out.println("Начать движение");
+    }
+
+    public void stopMoving() {
+        System.out.println("Закончить движение");
+    }
+*/
+
+   private int productionYear;
     private String productionCountry;
 
     public Double speed;
@@ -107,6 +121,7 @@ public class Bus extends Transport {
         return model;
     }
 
+
     public int getProductionYear() {
         return productionYear;
     }
@@ -159,6 +174,7 @@ public class Bus extends Transport {
         this.model = model;
     }
 
+
     public void setProductionYear(int productionYear) {
         this.productionYear = productionYear;
     }
@@ -183,3 +199,4 @@ public class Bus extends Transport {
         this.priceOfTrip = priceOfTrip;
     }
 }
+

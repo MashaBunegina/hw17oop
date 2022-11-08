@@ -3,6 +3,26 @@ public abstract class Transport {
 
     String brand;
     String model;
+    double engineVolume;
+    public Transport( String brand,String model, double engineVolume) {
+        if (brand == null || brand.isEmpty()) {
+            this.brand = "default";
+        } else {
+            this.brand = brand;
+        }
+        if (model == null || model.isEmpty()) {
+            this.model = "o";
+        } else {
+            this.model = model;
+        }
+    }
+        public void startMoving() {
+            System.out.println("Начать движение");
+        }
+    public void stopMoving() {
+        System.out.println("Закончить движение");
+    }
+
     private int productionYear;
     private String productionCountry;
 
@@ -199,36 +219,35 @@ public abstract class Transport {
         return model;
     }
 
-    public int getProductionYear() {
+   public int getProductionYear() {
         return productionYear;
     }
 
-    public String getProductionCountry() {
-        return productionCountry;
-    }
+   public String getProductionCountry() {
+    return productionCountry;
+   }
 
 
     public void setColour(String colour) {
-        this.colour = colour;
-    }
+      this.colour = colour; }
 
     public String getFinalStop() {
         return finalStop;
     }
 
     public int getNumberOfWagons() {
-        return numberOfWagons;
+    return numberOfWagons;
     }
 
     public String getStation() {
-        return station;
-    }
+      return station;
+  }
 
     public double getPriceOfTrip() {
         return priceOfTrip;
-    }
+   }
 
-    public String colour;
+   public String colour;
 
     public String getColour() {
         return colour;
@@ -238,7 +257,7 @@ public abstract class Transport {
         this.speed = speed;
     }
 
-    public Double getSpeed() {
+   public Double getSpeed() {
         return speed;
     }
 
@@ -251,15 +270,15 @@ public abstract class Transport {
         this.model = model;
     }
 
-    public void setProductionYear(int productionYear) {
+   public void setProductionYear(int productionYear) {
         this.productionYear = productionYear;
-    }
+   }
 
     public void setProductionCountry(String productionCountry) {
         this.productionCountry = productionCountry;
     }
 
-    public void setFinalStop(String finalStop) {
+   public void setFinalStop(String finalStop) {
         this.finalStop = finalStop;
     }
 
@@ -272,10 +291,12 @@ public abstract class Transport {
     }
 
     public void setPriceOfTrip(double priceOfTrip) {
-        this.priceOfTrip = priceOfTrip;
-    }
+       this.priceOfTrip = priceOfTrip;
 
 }
+}
+
+
 
 
 
